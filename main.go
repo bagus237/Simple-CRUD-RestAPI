@@ -20,6 +20,7 @@ func init() {
 	db.AutoMigrate(&Person{})
 }
 
+//Pembuatan record dan field aduh salah
 type (
 	Person struct {
 		Name        string `json:"name"`
