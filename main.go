@@ -6,6 +6,7 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 	"net/http"
 )
+//Bismillah
 
 var db *gorm.DB
 //Koneksi ke MySQL
@@ -18,7 +19,7 @@ func init() {
 	}
 	db.AutoMigrate(&Person{})
 }
-//Pembuatan record dan field 
+
 type (
 	Person struct {
 		Name        string `json:"name"`
@@ -138,7 +139,7 @@ func transferEPToModel(EP editPerson) Person {
 	}
 	return model
 }
-// Untuk Validasi Data Not Null
+// Untuk Validasi data not null
 func validatorCreated(EP editPerson) string {
 
 	var kosong string = " Is Empty"
@@ -163,7 +164,7 @@ func validatorCreated(EP editPerson) string {
 }
 
 func main() {
-//Untuk Alamat URLnya
+//Untuk Alamat Urlnya
 	router := gin.Default()
 	v1 := router.Group("/api/service")
 	{
